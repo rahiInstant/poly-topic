@@ -114,3 +114,45 @@ async function search() {
   displayPost(posts);
   searchField.value = "";
 }
+
+async function latestPost() {
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/retro-forum/latest-posts"
+  );
+  const data = await res.json();
+  console.log(data);
+  displayLatestPost(data);
+}
+
+latestPost();
+function displayLatestPost(latestPost) {
+  const latestPostContainer = document.getElementById("latest-post-container");
+  for (const post of latestPost) {
+    const latestCard = document.createElement("div");
+    latestCard.classList = `w-80 p-6 border rounded-lg lg:rounded-[24px]`;
+    latestCard.innerHTML = `            
+  <!-- image -->
+  <div class="h-48 ">
+    <img class="w-full h-full rounded-lg lg:rounded-[20px]" src="${
+      post.cover_image
+    }" alt="">
+  </div>
+  <!-- date -->
+  <div class="mt-6 text-base text-[#12132D99]"> <i class="fa-regular fa-calendar"></i> <span>${
+    post.author.posted_date
+  }</span></div>
+  <h2 class="text-lg font-extrabold text-[#12132D] mt-4">${post.title}</h2>
+  <h2 class="text-base text-[#12132D99] mt-3">${post.description}</h2>
+  <!-- profile -->
+  <div class="flex gap-4 mt-4 items-center">
+    <img class="w-11 h-11 rounded-full" src="${post.profile_image}" alt="">
+    <div>
+      <h3 class="text-base font-bold text-[#12132D]">${post.author.name}</h3>
+      <h3 class="text-sm text-[#12132D99]">${
+        post.author.designation ? post.author.designation : "Unknown"
+      }</h3>
+    </div>
+  </div>`;
+    latestPostContainer.appendChild(latestCard);
+  }
+}

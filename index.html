@@ -214,7 +214,7 @@
                 <i class="fa-solid fa-check-double text-green-600"></i>
                 <span class="lg:inline-block hidden">Mark as </span> read (<span
                   id="read-count"
-                ></span
+                  >0</span
                 >)
               </h3>
             </div>
@@ -229,7 +229,7 @@
       <!-- join our forum section -->
       <section class="mt-10 lg:mt-24 mx-3">
         <div
-          class="bg-[#12132D] px-12 lg:px-24 py-10 lg:py-20 flex lg:flex-row flex-col-reverse items-center  gap-6 text-white rounded-lg lg:rounded-[32px]"
+          class="bg-[#12132D] px-12 lg:px-24 py-10 lg:py-20 flex lg:flex-row flex-col-reverse items-center gap-6 text-white rounded-lg lg:rounded-[32px]"
         >
           <!-- left section -->
           <div class="lg:w-[80%] flex flex-col items-center lg:items-start">
@@ -256,11 +256,25 @@
         </div>
       </section>
       <!-- Latest Post Section -->
-      <section class="mt-10 lg:mt-24 mx-3">
-
+      <section class="mt-10 lg:mt-24 mx-3 flex flex-col items-center">
+        <h1 class="font-black text-3xl lg:text-4xl text-center">
+          Latest Posts
+        </h1>
+        <h3
+          class="mt-2 lg:mt-6 mb-5 lg:mb-12 text-sm px-3 lg:px-32 lg:text-lg text-center"
+        >
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </h3>
+        <div
+          class="flex lg:flex-row flex-col gap-5"
+          id="latest-post-container"
+        ></div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="mt-10 lg:mt-24 bg-[#12132D0D] px-[250px] py-[100px]">
+     
+    </footer>
     <script src="./script/retro.js"></script>
   </body>
 </html>
