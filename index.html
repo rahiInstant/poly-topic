@@ -24,7 +24,7 @@
     <title>ReTro</title>
   </head>
   <body class="font-mulish">
-    <header class="max-w-screen-lg mx-auto">
+    <header class="max-w-6xl mx-auto">
       <div class="navbar bg-base-100 mt-6">
         <div class="navbar-start">
           <div class="dropdown">
@@ -82,9 +82,9 @@
               </li>
             </ul>
           </div>
-          <a class=" text-3xl font-black">ReTro</a>
+          <a class="text-3xl font-black">ReTro</a>
         </div>
-        <div class="navbar-end hidden lg:flex">
+        <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1 gap-3">
             <div
               class="tooltip border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
@@ -119,11 +119,65 @@
         </div>
       </div>
     </header>
-    <main class="max-w-screen-lg mx-auto">
+    <main class="max-w-6xl mx-auto">
       <!-- banner section -->
-      <div>
-        
-      </div>
+      <section>
+        <div
+          class="w-auto bg-[#12132D] bg-[url('./images/bgbanner.png')] bg-no-repeat bg-bottom  px-24 py-20 rounded-3xl flex lg:flex-row items-center flex-col gap-9 mt-6"
+        >
+          <div class="flex-1">
+            <h1
+              class="text-5xl lg:text-6xl text-center lg:text-left font-black text-white leading-[60px] lg:leading-[88px]"
+            >
+              Welcome to the
+              <span
+                class="bg-gradient-to-r from-[#797DFC] to-[#797dfc02] bg-clip-text text-transparent"
+                >ReTro</span
+              >
+              Forum
+            </h1>
+            <p
+              class="text-xl text-center lg:text-left font-medium text-white mt-5 w-96"
+            >
+              Share your favorite opinion and win and wp forum coffee mug!
+            </p>
+            <div class="mt-8 relative w-fit h-fit">
+              <input
+                class="p-5 w-96 rounded-[50px] outline-none"
+                type="text"
+                name=""
+                id=""
+                placeholder="Search here anything"
+              />
+              <button
+                class="bg-[#797DFC] rounded-[46px] px-7 text-white font-bold text-xl absolute right-0 top-0 bottom-0 my-1 mr-1"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-12 rounded-3xl text-2xl font-medium flex flex-col w-96 space-y-6 h-fit"
+          >
+            <div class="flex justify-between">
+              <div>Registered Users</div>
+              <h2>01</h2>
+            </div>
+            <div class="flex justify-between">
+              <h2>Forum</h2>
+              <h2>01</h2>
+            </div>
+            <div class="flex justify-between">
+              <h2>Topics</h2>
+              <h2>01</h2>
+            </div>
+            <div class="flex justify-between">
+              <h2>Replies</h2>
+              <h2>01</h2>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
