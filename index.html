@@ -9,11 +9,23 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/22a70726e2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+      .font-mulish {
+        font-family: "Mulish", sans-serif;
+      }
+    </style>
+
     <title>ReTro</title>
   </head>
-  <body>
-    <header class="">
-      <div class="navbar bg-base-100">
+  <body class="font-mulish">
+    <header class="max-w-screen-lg mx-auto">
+      <div class="navbar bg-base-100 mt-6">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -36,40 +48,83 @@
               tabindex="0"
               class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li><a>Item 1</a></li>
               <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
+                <a
+                  ><i
+                    class="fa-solid fa-house border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+                  ></i>
+                  Home</a
+                >
               </li>
-              <li><a>Item 3</a></li>
+              <li>
+                <a
+                  ><i
+                    class="fa-solid fa-pencil border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+                  ></i>
+                  Edit</a
+                >
+              </li>
+              <li>
+                <a>
+                  <i
+                    class="fa-solid fa-user-plus border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+                  ></i>
+                  Add</a
+                >
+              </li>
+              <li>
+                <a
+                  ><i
+                    class="fa-regular fa-flag border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+                  ></i>
+                  Profile</a
+                >
+              </li>
             </ul>
           </div>
-          <a class=" text-xl">ReTro</a>
+          <a class=" text-3xl font-black">ReTro</a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-3">
+            <div
+              class="tooltip border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+              data-tip="Home"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div
+              class="tooltip border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+              data-tip="Edit"
+            >
+              <i class="fa-solid fa-pencil"></i>
+            </div>
+            <div
+              class="tooltip border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+              data-tip="Add"
+            >
+              <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div
+              class="tooltip border border-black bg-[#5050521a] flex items-center justify-center rounded-full w-10 h-10"
+              data-tip="Profile"
+            >
+              <i class="fa-regular fa-flag"></i>
+            </div>
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn">Button</a>
+          <a class="btn text-xl font-bold bg-[#797DFC] text-white rounded-3xl"
+            >Sign In</a
+          >
         </div>
       </div>
     </header>
-    <main></main>
+    <main class="max-w-screen-lg mx-auto">
+      <!-- banner section -->
+      <div>
+        
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
