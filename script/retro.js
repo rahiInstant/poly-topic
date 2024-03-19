@@ -1,5 +1,5 @@
 const postContainer = document.getElementById("card-container");
-
+const loader = document.getElementById('loading')
 async function allPost() {
   const res = await fetch(
     "https://openapi.programming-hero.com/api/retro-forum/posts"
@@ -82,6 +82,9 @@ function displayPost(posts) {
     </div>`;
     postContainer.appendChild(card);
   }
+  setTimeout(() => {
+    loader.classList.add('hidden')
+  },2000)
 }
 
 let count = 0;
@@ -103,6 +106,7 @@ function readPost(name, view) {
 }
 
 async function search() {
+  loader.classList.remove('hidden')
   const searchField = document.getElementById("search");
   const searchFieldValue = searchField.value;
   const res = await fetch(
@@ -139,7 +143,7 @@ function displayLatestPost(latestPost) {
   </div>
   <!-- date -->
   <div class="mt-6 text-base text-[#12132D99]"> <i class="fa-regular fa-calendar"></i> <span>${
-    post.author.posted_date
+    post.author.posted_date? post.author.posted_date:'No publish date'
   }</span></div>
   <h2 class="text-lg font-extrabold text-[#12132D] mt-4">${post.title}</h2>
   <h2 class="text-base text-[#12132D99] mt-3">${post.description}</h2>
