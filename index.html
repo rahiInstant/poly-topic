@@ -20,7 +20,6 @@
         font-family: "Mulish", sans-serif;
       }
     </style>
-
     <title>ReTro</title>
   </head>
   <body class="font-mulish">
@@ -121,14 +120,14 @@
     </header>
     <main class="max-w-6xl mx-auto">
       <!-- banner section -->
-      <section>
+      <section class="mx-3">
         <div
           style="
             background: #12132d url('./images/bgbanner.png');
             background-repeat: no-repeat;
             background-position: bottom;
           "
-          class="w-auto px-10 lg:px-24 py-6 lg:py-20 rounded-3xl flex lg:flex-row items-center flex-col gap-9 mt-6"
+          class="w-auto px-10 lg:px-24 py-6 lg:py-20 rounded-lg lg:rounded-3xl flex lg:flex-row items-center flex-col gap-9 mt-6"
         >
           <div class="flex-1 flex items-center lg:items-start flex-col">
             <h1
@@ -148,21 +147,22 @@
             </p>
             <div class="mt-8 relative w-fit h-fit">
               <input
-                class="p-4 lg:p-5 w-72 lg:w-96 rounded-[50px] outline-none"
+                class="p-4 lg:p-5 w-72 lg:w-96 rounded-lg lg:rounded-[50px] outline-none text-base font-medium"
                 type="text"
                 name=""
-                id=""
+                id="search"
                 placeholder="Search here"
               />
               <button
-                class="bg-[#797DFC] rounded-[46px] px-5 lg:px-7 text-white font-bold text-base lg:text-xl absolute right-0 top-0 bottom-0 my-1 mr-1"
+                onclick="search()"
+                class="bg-[#797DFC] rounded-lg lg:rounded-[46px] px-5 lg:px-7 text-white font-bold text-base lg:text-xl absolute right-0 top-0 bottom-0 my-1 mr-1"
               >
                 Search
               </button>
             </div>
           </div>
           <div
-            class="bg-white p-12 rounded-3xl text-lg lg:text-2xl font-medium flex flex-col w-72 lg:w-96 space-y-6 h-fit mx-5 lg:mx-0"
+            class="bg-white p-12 rounded-lg lg:rounded-3xl text-lg lg:text-2xl font-medium flex flex-col w-72 lg:w-96 space-y-6 h-fit mx-5 lg:mx-0"
           >
             <div class="flex justify-between">
               <div>Registered Users</div>
@@ -184,7 +184,7 @@
         </div>
       </section>
       <!-- let's discuss section -->
-      <section class="mt-10 lg:mt-24  flex flex-col items-center">
+      <section class="mt-10 lg:mt-24 flex flex-col items-center">
         <h1 class="font-black text-3xl lg:text-4xl text-center">
           Let’s Discuss
         </h1>
@@ -195,105 +195,41 @@
           app. The integrated testing features allow for a streamlined .
         </h3>
         <!-- main portion -->
-        <div class="flex gap-6 lg:flex-row flex-col">
+        <div class="flex gap-6 lg:flex-row flex-col mx-3 lg:mx-0">
           <!-- card portion -->
-          <div class="flex gap-5 flex-col mx-3 lg:mx-0">
-            <!-- first div -->
-            <div
-              class="bg-[#F3F3F5] flex lg:flex-row flex-col lg:items-start items-center p-4 lg:p-10 rounded-lg lg:rounded-2xl gap-6 h-fit w-fit"
-            >
-              <!-- image and status section -->
-              <div class="relative h-fit w-fit">
-                <img
-                  src="./images/user-1.png"
-                  class="w-16 h-16 rounded-md"
-                  alt=""
-                />
-                <div
-                  class="bg-green-600 h-4 w-4 rounded-full border-2 border-[#F3F3F5] absolute -top-1 -right-1"
-                ></div>
-              </div>
-              <!-- other info -->
-              <div class="flex-1">
-                <div
-                  class="flex lg:flex-row flex-col gap-2 lg:gap-5 items-center"
-                >
-                  <h1 id="category" class="text-sm font-medium"># Music</h1>
-                  <h1 class="text-sm font-medium">
-                    Author : <span id="author">Awlad Hossain</span>
-                  </h1>
-                </div>
-                <h1
-                  id="title"
-                  class="mt-3 text-xl font-bold lg:text-left text-center"
-                >
-                  10 Kids Unaware of Their Halloween Costume
-                </h1>
-                <h1
-                  id="description"
-                  class="mt-4 text-base lg:text-left text-center"
-                >
-                  It’s one thing to subject yourself to ha Halloween costume
-                  mishap because, hey that’s your prerogative
-                </h1>
-                <hr class="border-dashed border border-[#12132D40] mt-5" />
-                <div
-                  class="mt-6 flex lg:flex-row flex-col gap-5 justify-between items-center text-base"
-                >
-                  <div class="flex gap-6">
-                    <h1>
-                      <i class="fa-regular fa-message"></i>
-                      <span id="cmnt">560</span>
-                    </h1>
-                    <h1>
-                      <i class="fa-regular fa-eye"></i>
-                      <span id="view">1658</span>
-                    </h1>
-                    <h1>
-                      <i class="fa-regular fa-clock"></i>
-                      <span id="time">5 min</span>
-                    </h1>
-                  </div>
-                  <div
-                    class="bg-green-600 text-white w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
-                  >
-                    <i class="fa-solid fa-envelope-open"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- first div -->
-
+          <div class="flex gap-5 flex-col" id="card-container">
+            <!-- card 01 -->
+            <!-- card 02 -->
+            <!-- card ... -->
           </div>
           <!-- status portion -->
           <div
-            class="bg-[#12132D0D] p-4 lg:p-6 rounded-lg lg:rounded-2xl mx-3 lg:mx-0 h-fit min-w-64 lg:min-w-96"
+            class="bg-[#12132D0D] flex-1 p-4 lg:p-6 rounded-lg lg:rounded-2xl h-fit min-w-64 lg:min-w-96"
+            id="read"
           >
             <!-- title Portion -->
             <div class="flex justify-between mx-3">
               <h1 class="text-xl font-bold">Title</h1>
               <h3 class="text-base">
                 <i class="fa-solid fa-check-double text-green-600"></i>
-                <span class="lg:inline-block hidden">Mark as </span> read
-                <span>()</span>
+                <span class="lg:inline-block hidden">Mark as </span> read (<span
+                  id="read-count"
+                ></span
+                >)
               </h3>
             </div>
             <!-- content portion -->
             <!-- cookie 01 -->
-            <div
-              class="mt-2 lg:mt-5 bg-white p-2 lg:p-4 rounded-lg lg:rounded-2xl flex gap-1 lg:gap-0 items-center"
-            >
-              <h1 class="text-sm lg:text-base font-semibold flex-1">
-                10 Kids Unaware of Their Halloween Costume
-              </h1>
-              <div class="">
-                <i class="fa-regular fa-eye"></i> <span id="view">1658</span>
-              </div>
-            </div>
+            <!-- cookie 02 -->
+            <!-- cookie ... -->
           </div>
         </div>
       </section>
+
+      <!-- join our forum section -->
+      <section class="mt-10 lg:mt-24"></section>
     </main>
     <footer></footer>
+    <script src="./script/retro.js"></script>
   </body>
 </html>
